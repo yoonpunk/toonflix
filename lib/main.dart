@@ -12,11 +12,41 @@ class App extends StatelessWidget {
     // Material 선택 후, 구글앱이 아닌 것처럼 보이게 할 수 있으니 우선 Material 스타일을 사용하자.
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("hello flutter"),
-        ),
-        body: Center(
-          child: Text('Hello world!'),
+        backgroundColor: Color(0xFF181818),
+        body: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 40),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 80,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        "Hey, Selena",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 28,
+                        ),
+                      ),
+                      Text(
+                        "Welcome back",
+                        style: TextStyle(
+                          color: Colors.white.withOpacity(0.8),
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
